@@ -1,3 +1,5 @@
+[Docs](https://docs.rs/log-tree)
+
 ### Log-Tree
 
 Fast! 100% customizeable and very easy to use.
