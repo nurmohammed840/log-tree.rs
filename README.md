@@ -38,7 +38,7 @@ fn main() {
 
 Output: `cargo run --example basic`
 
-```json
+```text
 A1
 ├─╼ B1
 │  ├─> C1
