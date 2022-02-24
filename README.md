@@ -5,6 +5,13 @@ This library used for printing tree structure in command line.
 
 ### Example
 
+Add this to your project's `Cargo.toml` file.
+
+```toml
+[dependencies]
+log-tree = "0.1"
+```
+
 ```rust
 // examples\basic.rs
 use log_tree::LogTree;
