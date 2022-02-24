@@ -1,13 +1,3 @@
-### Log-Tree
-
-Fast! 100% customizeable and very easy to use.
-This library used for printing tree structure in command line.
-
-### Example
-
-```rust
-// examples\basic.rs
-
 use log_tree::LogTree;
 
 struct Tree {
@@ -34,17 +24,3 @@ fn main() {
     );
     println!("{}", tree.fmt_tree());
 }
-```
-
-Output: `cargo run --example basic`
-
-```json
-A1
-├─╼ B1
-│  ├─> C1
-│  ╰─> C2
-└─╼ B2
-   ╰─> C1
-      ├─> D1
-      ╰─> D2
-```
