@@ -66,9 +66,13 @@ fn fmt_tree(
     if let Some((key, childs)) = tree.add_node(lvl) {
         out.push_str(&key);
         let childs = childs.as_ref().as_ref();
-        let len = childs.len();
-        for (i, child) in childs.iter().enumerate() {
-            fmt_tree(prefix.clone(), i == len - 1, child, out, lvl + 1);
+        let last_idx = match childs.len() {
+            0 => return,
+            len => len - 1,
+        };
+        for child in childs[..last_idx].iter() {
+            fmt_tree(prefix.clone(), false, child, out, lvl + 1);
         }
+        fmt_tree(prefix.clone(), true, &childs[last_idx], out, lvl + 1);
     }
 }
